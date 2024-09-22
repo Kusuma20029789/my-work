@@ -1,0 +1,182 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="th">
+
+    
+
+    <style>
+        body {
+           margin: 0;
+           font-family: Arial, sans-serif;
+       }
+       .navbar {
+                   background-color: #f59e0b;
+                   width: 100%; 
+                   padding: 0px 20px;
+                   display: flex;
+                   justify-content: "space-between-max-w-screen-xl px-4 mx-auto";
+                   align-items: center;
+                   position: fixed; 
+                   top: 0;
+                   left: 0;
+                   z-index: 1000;
+               }
+       
+       .navbar img {
+           border-radius: 50%;
+           height: 50px; 
+           width: 50px; 
+       }
+       .navbar ul {
+           display: flex;
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           flex-grow: 1;
+       }
+       .navbar a {
+           color: white;
+           text-decoration: none;
+           padding: 10px 20px;
+           font-weight: bold;
+       }
+       .navbar a:hover {
+           background-color: #ff7f00;
+           border-radius: 5px;
+       }
+       .circle-image {
+           border-radius: 50%;
+           width: 150px;
+           height: 150px;
+           object-fit: cover;
+       }
+     
+       .tableContainer {
+           display: none;
+           text-align: justify;
+       }
+       p {
+           margin-bottom: 50px; 
+       }
+       .text-container {
+               text-align: center;
+               margin: 50px;
+               }
+               li {
+               list-style: none;
+               padding: 10px;
+               margin-bottom: 15px; 
+           }
+       </style>
+       
+       
+       <div class="navbar">
+        {% load static %}
+        <a href="#"><img src="{% static 'images/f0701.jpg' %}" alt="Logo"></a>
+           <nav class="menu"></nav>
+               <ul>
+                <li><a href="{% url 'index' %}" class="button">หน้าแรก</a></li>
+                <li><a href="#">ตารางเทียบแคลอรี่</a></li>
+                <li><a href="{% url 'page2' %}">ผู้จัดทำ</a></li>
+       
+       
+               </ul>
+           </nav>
+       </div>
+       
+       
+       
+           <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap">
+       
+           
+       <ul>
+          
+         
+            <p></p>
+        </li>
+           <li>  
+               <p></p>
+           </li>
+           <li>  
+            <p></p>
+        </li>
+           <ul class="flex justify-center">
+               <li>
+                   
+               </li>
+           </ul>
+        </ul>   
+       
+       
+       
+        <style>
+            .circle-image {
+                width: 200px; /* กำหนดความกว้าง */
+                height: 200px; /* กำหนดความสูง */
+                object-fit: cover; /* ปรับภาพให้พอดีกับกรอบ */
+                border-radius: 0; /* ไม่ให้มีมุมโค้ง */
+            }
+            
+            .container {
+                display: flex;
+                justify-content: center; /* จัดกลางองค์ประกอบทั้งหมด */
+                flex-wrap: wrap; /* ให้ไอเทมสามารถพับไปอยู่ในบรรทัดใหม่ */
+                margin: 25px auto; /* จัดกลาง */
+                max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+            }
+        
+            .table-cell {
+                flex: 1 1 30%;  
+                text-align: center; 
+                padding: 10px; 
+                margin: 10px; 
+                border-radius: 8px;
+                border: 2px solid black; /* กำหนดเส้นกรอบสีดำ */
+                background-color: white; /* พื้นหลังสีขาว */
+            }
+        
+            .table-cell h3 {
+                font-family: 'Mitr', sans-serif; /* ใช้ฟอนต์ Mitr */
+                font-weight: bold;
+                margin-top: 10px; /* เว้นระยะจากรูปภาพ */
+            }
+        
+            .table-cell p {
+                margin-top: 5px; /* เว้นระยะจากหัวข้อ */
+            }
+        </style>
+              </li>
+           <ul class="flex justify-center">
+               <li>
+                   <a href="#" class="prompt-font block py-2 px-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-semibold">
+                       <span class="underline">อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี</span>
+                   </a>
+               </li>
+           </ul>
+        </ul>  
+
+        <main>
+            <div class="container">
+                <div class="table-cell"> 
+                    <ul class="flex justify-center">
+                        <li>
+                            <a href="#" class="prompt-font block text-gray-700 text-center">
+                                <div style="display: flex; justify-content: center; margin: 10px;">
+                                    <img src="{% static 'images/f0303.jpg' %}" class="circle-image" alt="หมี่กะทิ" style="margin: 5px;">
+                                    <img src="{% static 'images/f0301.jpg' %}" class="circle-image" alt="หมี่กะทิ" style="margin: 5px;">
+                                </div>
+                                
+                                <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap" rel="stylesheet">
+                                <h3 class="font-Mitr">หมี่กะทิ</h3>
+                            </a>
+                            <p>หมี่กะทิเป็นอาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพ 
+                            ตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี ที่ได้สืบทอดกันมารุ่นต่อรุ่น มีส่วนผสมจากวัตถุดิบธรรมชาติที่มีในท้องถิ่น มีความโดดเด่นและมีเอกลักษณ์เฉพาะที่มีความประณีตสวยงาม หมี่กะทิของอุบลราชธานีจะไม่ใช้เส้นหมี่เหมือนภาคกลาง เนื่องจากชาวอีสานจะทำเส้นก๋วยเตี๋ยวขึ้นเอง ซึ่งเรียกว่า "หมี่" คล้ายกับเส้นเล็กของทางภาคกลาง แต่จะเป็นเส้นที่ตากแห้ง และขดเป็นวงกลม เช่นเดียวกับเส้นจันท์ เมื่อทำหมี่กะทิ ต้องนำเส้นหมี่ไปแช่น้ำให้คลายตัว แล้วลวกด้วยน้ำเดือดจนเส้นนุ่ม สำหรับเครื่องปรุงหมี่กะทิอุบลนั้นใช้ส่วนผสมจากวัตถุดิบธรรมชาติที่มีในท้องถิ่น ผัดกับเครื่องโขลกจากพริกแกงกับกะทิ ใส่หมูสับ เต้าเจี้ยว น้ำมะขามเปียก น้ำตาลปึก เกลือป่น ผัดเครื่องปรุงทั้งหมดให้เข้ากันดี เมื่อรับประทานจัดใส่จานตักราดด้วยน้ำปรุงรสหมี่กะทิเข้มข้น มีรสชาติที่หวานมันกลมกล่อม ราดบนเส้นหมี่ รับประทานกับผักพื้นบ้านล้วนเป็นสมุนไพรจากธรรมชาติ เครื่องเคียงนานาชนิด อาทิ หัวปลี, ถั่วงอก, ใบกุยช่าย, ใบบัวบก, แตงกวา, ผักติ้ว, ใบชะพลู, ยอดมะม่วง, ใบชะมวง, ผักกาดหอม เป็นต้น มีคุณค่าทางสมุนไพรสูงมีใยอาหารสูง มีวิตามิน และเกลือแร่ที่สำคัญอยู่ในส่วนประกอบของอาหารและในส่วนที่เป็นเครื่องเคียง อาหารพื้นเมืองอุดมด้วยพืชผักสมุนไพรมากมายหลายชนิด ซึ่งมีสรรพคุณทางยาจากสารพฤกษเคมี จึงมีคุณสมบัติในการรักษาสุขภาพให้เป็นปกติกับปรับปรุงสุขภาพให้ดีขึ้นและลดอัตราเสี่ยงต่อการเกิดโรค เช่น โรคไขมันในเลือดสูง โรคหัวใจและหลอดเลือด โรคความดันโลหิตสูง โรคเบาหวาน เป็นต้น</p>
+             
+                             <p>จึงถือได้ว่า หมี่กะทิเป็นอาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพของจังหวัดอุบลราชธานี มีความโดดเด่นและมีเอกลักษณ์ของความเป็นไทย เป็นอาหารพื้นเมืองโบราณของจังหวัดอุบลราชธานีมาช้านานที่ได้รับการถูกปรุงแต่งและถ่ายทอดสูตรอาหารพื้นเมืองแบบรุ่นต่อรุ่น จึงเป็นความผสมผสานที่ลงตัวระหว่างชนิดของอาหารและเครื่องปรุง มีเสน่ห์ของความเป็นไทย เป็นวัฒนธรรมอาหารที่ควรอนุรักษ์ และยังแสดงออกถึงภูมิปัญญาท้องถิ่นและมรดกทางวัฒนธรรมอาหารพื้นเมืองที่ต้องรักษาสืบทอดกันต่อไป</p>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+                     

@@ -1,0 +1,227 @@
+
+
+
+
+<style>
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+            background-color: #f59e0b;
+            width: 100%; 
+            padding: 0px 20px;
+            display: flex;
+            justify-content: "space-between-max-w-screen-xl px-4 mx-auto";
+            align-items: center;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+.navbar img {
+    border-radius: 50%;
+    height: 50px; 
+    width: 50px; 
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: #ff7f00;
+    border-radius: 5px;
+}
+.circle-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.button {
+    background-color: #ff7f00;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.tableContainer {
+    display: none;
+    text-align: justify;
+}
+p {
+    margin-bottom: 50px; 
+}
+.text-container {
+        text-align: center;
+        margin: 50px;
+        }
+        li {
+        list-style: none;
+        padding: 10px;
+        margin-bottom: 15px; 
+    }
+</style>
+
+
+<div class="navbar">
+    {% load static %}
+    <a href="#"><img src="{% static 'images/f0701.jpg' %}" alt="Logo"></a>
+    
+    <nav class="menu"></nav>
+        <ul>
+            <li><a href="{% url 'index' %}" class="button">หน้าแรก</a></li>
+            <li><a href="#">ตารางเทียบแคลอรี่</a></li>
+            <li><a href="{% url 'page2' %}">ผู้จัดทำ</a></li>
+
+           
+
+        </ul>
+    </nav>
+</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5; 
+        }
+
+        .container {
+            width: 300px; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden; 
+            background-color: #fff; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #ff7f00;
+            border-radius: 5px;
+        }
+        .circle-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+   
+        .container {
+            width: 300px; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden; 
+            background-color: #fff; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            margin: 100px auto; /* Center the container */
+        }
+        .image-container {
+            width: 100%;
+            height: 150px;
+            overflow: hidden; 
+            position: relative;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .content {
+            padding: 16px; 
+            text-align: center; 
+        }
+        .name {
+            font-family: 'Mitr', sans-serif;
+            font-weight: bold;
+            font-size: 20px; 
+            margin: 8px 0;
+        }
+        .info {
+            font-size: 14px; 
+            color: #666;
+        }
+        .skillList {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px; /* Space between info and skill list */
+        }
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1px;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .unity { background-color: #00d9d0; }
+        .php { background-color: #ffb300; }
+        .react { background-color: #ffeb3b; color: black; }
+        .mysql { background-color: #f44336; }
+        .icon { margin-left: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    {% load static %}
+    <a href="#"><img src="{% static 'images/f0701.jpg' %}" alt="Logo"></a>
+    <nav class="menu">
+        <ul>
+            <li><a href="{% url 'index' %}" class="button">หน้าแรก</a></li>
+            <li><a href="#">ตารางเทียบแคลอรี่</a></li>
+            <li><a href="{% url 'page2' %}">ผู้จัดทำ</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="image-container">
+        <img src="{% static 'images/IMG_9827.JPG' %}" alt="Your Image Description"> 
+    </div>
+    <div class="content">
+        <div class="name">นางสาว กุสุมา อารมย์</div>
+        <div class="info">นักศึกษามหาลัยมออุบลราชธานี
+                        64114640712
+        </div>
+        <div class="skillList">
+            <div class="box unity">Art<span class="icon">⭐</span></div>
+            <div class="box react">design<span class="icon">⭐</span></div>
+            <div class="box mysql">learn<span class="icon">👍</span></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

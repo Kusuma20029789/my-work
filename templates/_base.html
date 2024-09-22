@@ -1,0 +1,39 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>{% block title %}Untitled{% endblock %}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap" rel="stylesheet">
+
+	{% load compress %}  
+
+	{% compress css %}
+	<link rel="stylesheet" href="{% static 'src/output.css' %}">
+	{% endcompress %}
+	
+	
+
+<body>
+	<div class="container mx-auto px-4 py-4">
+		{% block content %}
+		{% endblock content %}
+	</div>
+</body>
+
+
+
+
+
+</html>

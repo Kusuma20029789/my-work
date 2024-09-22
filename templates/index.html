@@ -1,0 +1,213 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+
+<style>
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+            background-color: #f59e0b;
+            width: 100%; 
+            padding: 0px 20px;
+            display: flex;
+            justify-content: "space-between-max-w-screen-xl px-4 mx-auto";
+            align-items: center;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+.navbar img {
+    border-radius: 50%;
+    height: 50px; 
+    width: 50px; 
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: #ff7f00;
+    border-radius: 5px;
+}
+.circle-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.button {
+    background-color: #acacac;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.tableContainer {
+    display: none;
+    text-align: justify;
+}
+p {
+    margin-bottom: 50px; 
+}
+.text-container {
+        text-align: center;
+        margin: 50px;
+        }
+        li {
+        list-style: none;
+        padding: 10px;
+        margin-bottom: 15px; 
+    }
+</style>
+
+
+<div class="navbar">
+    <a href="#"><img src="static/images/f0701.jpg" alt="Logo"></a>
+    <nav class="menu"></nav>
+        <ul>
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#">ตารางเทียบแคลอรี่</a></li>
+            <li><a href="{% url 'page2' %}">ผู้จัดทำ</a></li>
+
+
+        </ul>
+    </nav>
+</div>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap">
+
+    
+<ul>
+    <li>  
+        <p></p>
+    </li>
+    <ul class="flex justify-center">
+        <li>
+            <a href="#" class="prompt-font block py-2 px-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-semibold">
+                <span class="underline">อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี</span>
+            </a>
+        </li>
+    </ul>
+    
+
+
+
+<style>
+    .circle-image {
+    width:200px; /* กำหนดความกว้าง */
+    height: 200px; /* กำหนดความสูง */
+    object-fit: cover; /* ปรับภาพให้พอดีกับกรอบ */
+}
+
+    .container {
+        display: flex;
+        justify-content: center; /* จัดกลางองค์ประกอบทั้งหมด */
+        flex-wrap: wrap; /* ให้ไอเทมสามารถพับไปอยู่ในบรรทัดใหม่ */
+        margin: 25px auto; /* จัดกลาง */
+        max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+    }
+
+    .table-cell {
+        flex: 1 1 30%;  text-align: center; padding: 10px; margin: 10px; 
+        border-radius: 8px;
+       
+       
+    }
+</style>
+<main>
+    <div class="container">
+        <div class="table-cell"> 
+            <ul class="flex justify-center">
+                <li>
+                    <a href="#" class="prompt-font block text-gray-700 text-center">
+                        <img src="static/images/f0301.jpg" class="circle-image mx-auto" alt="หมี่กะทิ">
+                        <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap" rel="stylesheet">
+                        <h3 class="font-Mitr font-bold text-xl mt-2">หมี่กะทิ</h3>
+                    </a>
+                    <p class="mt-1 text-center">หมี่กะทิเป็นอาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพ 
+                         ตามวิถีภูมิปัญญาท้องถิ่น
+                        </p>
+                      
+                        <button class="toggleButton button mt-2" onclick="window.location.href='/form/';">เรียนรู้เพิ่มเติม</button>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="table-cell">
+            <ul class="flex justify-center">
+                <li>
+                    <a href="#" class="prompt-font block text-gray-700 text-center">
+                        <img src="static/images/f0101.jpg" class="circle-image mx-auto" alt="เมี่ยงคำกลีบบัวหลวงแบบโบราณ">
+                        <h3 class="font-Mitr font-bold text-xl mt-2">เมี่ยงคำกลีบบัวหลวงแบบโบราณ</h3>
+                    </a>
+                    <p class="mt-1 text-center">เมี่ยงคำกลีบบัวหลวง เป็นอาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพ</p>
+                    <button class="toggleButton button mt-2" onclick="window.location.href='/b2/';">เรียนรู้เพิ่มเติม</button>
+
+                </li>
+            </ul>
+        </div>
+        
+        
+        <div class="table-cell">
+            <ul class="flex justify-center">
+                <li>
+                    <a href="#" class="prompt-font block text-gray-700 text-center">
+                        <img src="static/images/f0402.jpg" class="circle-image mx-auto" alt="หลนเค็มบักนัด">
+                        <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap" rel="stylesheet">
+                        <h3 class="font-Mitr font-bold text-xl  mt-2">หลนเค็มบักนัด</h3>
+                        <p>หลนเค็มบักนัดเป็นอาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่น</p>
+                        <button class="toggleButton button mt-2" onclick="window.location.href='/b3/';">เรียนรู้เพิ่มเติม</button>
+                        <div class="tableContainer">
+                            <p>รายละเอียดเพิ่มเติมเกี่ยวกับปลาส้มทรงเครื่องสมุนไพร...</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+</main>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.toggleButton').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const tableContainer = this.nextElementSibling;
+                const isVisible = tableContainer.style.display !== 'none';
+                tableContainer.style.display = isVisible ? 'none' : 'block';
+                this.textContent = isVisible ? 'เรียนรู้เพิ่มเติม' : 'ซ่อนข้อมูล';
+            });
+        });
+    });
+</script>
+    
+</div>
+</main>
+
+
+
+{% endblock content %}
